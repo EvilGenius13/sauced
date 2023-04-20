@@ -1,17 +1,28 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { createRoot } from 'react-dom/client';
+import { HashRouter as Router, Routes, Route} from 'react-router-dom';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import DrinkList from './components/DrinkList/DrinkList';
+import Drink from './components/Drink/Drink';
+import Random from './components/Random/Random';
+import Search from './components/Search/Search';
+import About from './components/About/About';
+
+const rootElement = document.getElementById('root');
+const root = createRoot(rootElement);
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  <Router basename='/'>
+    <Routes>
+      <Route path="/" element={<App />}>
+        <Route path="/" element={<DrinkList />} />
+        <Route path="/drink/:drinkId" element={<Drink />} />
+        <Route path="/random" element={<Random />} />
+        <Route path="/search" element={<Search />} />
+        <Route path="/about" element={<About />} />
+      </Route>
+    </Routes>
+  </Router>
+)
