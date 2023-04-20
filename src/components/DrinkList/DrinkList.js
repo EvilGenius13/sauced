@@ -6,7 +6,7 @@ const DrinkList = () => {
   const [drinks, setDrinks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [dropdownChoice, setDropdownChoice] = useState('Cocktail');
-
+  
   useEffect(() => {
     setLoading(true);
     fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${dropdownChoice}`)
@@ -37,7 +37,7 @@ const DrinkList = () => {
         ) : (
           drinks.map((drink) => (
             <Link to={`/drink/${drink.idDrink}`} key={drink.idDrink} state={drink}>
-              <div className="max-w-sm rounded overflow-hidden shadow-lg drink-card">
+              <div className="max-w-sm rounded overflow-hidden shadow-lg border border-gray-300 hover:border-blue-500 transform transition duration-300 hover:scale-105">
                 <img className="w-full" src={drink.strDrinkThumb} alt={drink.strDrink} />
                 <div className="px-6 py-4">
                   <div className="font-bold text-base truncate">{drink.strDrink}</div>

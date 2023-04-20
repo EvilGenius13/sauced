@@ -10,7 +10,7 @@ const Header = () => {
             <div className="flex-shrink-0 flex items-center">
               <Link to="/" className="font-bold text-lg text-gray-800">Sauced</Link>
             </div>
-            <div className="flex">
+            <div className="flex items-center">
               <Link to="/search" className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50">Search</Link>
               <Link to="/about" className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50">About</Link>
               <Link to="/random" className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50">Surprise Me</Link>
