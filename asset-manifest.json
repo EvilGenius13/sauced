@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/sauced/static/css/main.c5a3569e.css",
-    "main.js": "/sauced/static/js/main.16c4e378.js",
+    "main.js": "/sauced/static/js/main.219e2f06.js",
     "index.html": "/sauced/index.html",
     "main.c5a3569e.css.map": "/sauced/static/css/main.c5a3569e.css.map",
-    "main.16c4e378.js.map": "/sauced/static/js/main.16c4e378.js.map"
+    "main.219e2f06.js.map": "/sauced/static/js/main.219e2f06.js.map"
   },
   "entrypoints": [
     "static/css/main.c5a3569e.css",
-    "static/js/main.16c4e378.js"
+    "static/js/main.219e2f06.js"
   ]
 }
