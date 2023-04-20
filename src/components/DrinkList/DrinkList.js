@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import './DrinkList.css';
 
 const DrinkList = () => {
   const [drinks, setDrinks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [dropdownChoice, setDropdownChoice] = useState('Cocktail');
-  
+
   useEffect(() => {
     setLoading(true);
     fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${dropdownChoice}`)
@@ -36,10 +37,10 @@ const DrinkList = () => {
         ) : (
           drinks.map((drink) => (
             <Link to={`/drink/${drink.idDrink}`} key={drink.idDrink} state={drink}>
-              <div className="max-w-sm rounded overflow-hidden shadow-lg">
+              <div className="max-w-sm rounded overflow-hidden shadow-lg drink-card">
                 <img className="w-full" src={drink.strDrinkThumb} alt={drink.strDrink} />
                 <div className="px-6 py-4">
-                  <div className="font-bold text-xl mb-2">{drink.strDrink}</div>
+                  <div className="font-bold text-base truncate">{drink.strDrink}</div>
                 </div>
               </div>
             </Link>
