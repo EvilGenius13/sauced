@@ -18,10 +18,10 @@ const DrinkList = () => {
   }, [dropdownChoice]);
 
   return (
-    <div className="mx-2">
+    <div className="mx-2 bg-emerald-10">
       <div className="flex justify-center my-4">
         <select
-          className="w-full sm:w-1/4 p-2 rounded-lg bg-white border border-gray-300 text-center text-sm"
+          className="w-full sm:w-1/4 p-2 rounded-lg bg-emerald-300 border border-gray-300 text-center text-md font-semibold"
           onChange={(e) => setDropdownChoice(e.target.value)}
           value={dropdownChoice}
         >
@@ -37,9 +37,9 @@ const DrinkList = () => {
         ) : (
           drinks.map((drink) => (
             <Link to={`/drink/${drink.idDrink}`} key={drink.idDrink} state={drink}>
-              <div className="max-w-sm rounded overflow-hidden shadow-lg border border-gray-300 hover:border-blue-500 transform transition duration-300 hover:scale-105">
+              <div className="max-w-sm rounded overflow-hidden shadow-lg border border-gray-300 hover:border-emerald-300 transform transition duration-300 hover:scale-105">
                 <img className="w-full" src={drink.strDrinkThumb} alt={drink.strDrink} />
-                <div className="px-6 py-4">
+                <div className="px-6 py-4 bg-emerald-300">
                   <div className="font-bold text-base truncate">{drink.strDrink}</div>
                 </div>
               </div>
