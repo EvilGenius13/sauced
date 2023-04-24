@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/sauced/static/css/main.70d43097.css",
-    "main.js": "/sauced/static/js/main.b475f413.js",
+    "main.css": "/sauced/static/css/main.610e9318.css",
+    "main.js": "/sauced/static/js/main.89ce4d30.js",
     "index.html": "/sauced/index.html",
-    "main.70d43097.css.map": "/sauced/static/css/main.70d43097.css.map",
-    "main.b475f413.js.map": "/sauced/static/js/main.b475f413.js.map"
+    "main.610e9318.css.map": "/sauced/static/css/main.610e9318.css.map",
+    "main.89ce4d30.js.map": "/sauced/static/js/main.89ce4d30.js.map"
   },
   "entrypoints": [
-    "static/css/main.70d43097.css",
-    "static/js/main.b475f413.js"
+    "static/css/main.610e9318.css",
+    "static/js/main.89ce4d30.js"
   ]
 }
