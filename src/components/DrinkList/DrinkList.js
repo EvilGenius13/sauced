@@ -18,7 +18,7 @@ const DrinkList = () => {
   }, [dropdownChoice]);
 
   return (
-    <div className="mx-2 bg-emerald-10">
+    <div className="mx-5 bg-emerald-4">
       <div className="flex justify-center my-4">
         <select
           className="w-full sm:w-1/4 p-2 rounded-lg bg-emerald-300 border border-gray-300 text-center text-md font-semibold"
@@ -31,7 +31,7 @@ const DrinkList = () => {
         </select>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-2">
         {loading ? (
           <p>Loading...</p>
         ) : (
