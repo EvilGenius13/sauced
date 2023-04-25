@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import './Drink.css';
 
 const Drink = () => {
   const location = useLocation();
@@ -15,7 +16,7 @@ const Drink = () => {
   return (
     <div className="flex flex-col lg:flex-row items-center justify-center mt-8 lg:mt-16">
       <div className="flex-shrink-0 mb-8 lg:mb-0 lg:mr-8">
-        <img src={drink.strDrinkThumb} alt={drink.strDrink} className="w-90p h-auto mx-auto rounded-lg" />
+        <img src={drink.strDrinkThumb} alt={drink.strDrink} className="h-auto drink-menu" />
       </div>
 
       <div className="max-w-xl">

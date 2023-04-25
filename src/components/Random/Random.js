@@ -9,7 +9,6 @@ const Random = () => {
       .then((res) => res.json())
       .then((data) => {
         setDrink(data.drinks[0]);
-        console.log(data.drinks[0])
       });
   }, []);
 
@@ -17,7 +16,7 @@ const Random = () => {
     <div className="flex flex-col lg:flex-row items-center justify-center mt-8 lg:mt-16">
       {drink && (
   <div className="flex-shrink-0 mb-8 lg:mb-0 lg:mr-8">
-    <img src={drink.strDrinkThumb} alt={drink.strDrink} className="w-90p h-auto mx-auto rounded-lg" />
+    <img src={drink.strDrinkThumb} alt={drink.strDrink} className="h-auto drink-menu" />
   </div>
 )}
 
