@@ -30,8 +30,9 @@ Run program with
 
 ## Wireframes
 
-![App Screenshot](https://imgur.com/pYUcRqY)
-![App Screenshot](https://imgur.com/pYUcRqY)
+<img width="1281" alt="Screenshot 2023-04-25 at 1 48 12 PM" src="https://user-images.githubusercontent.com/93214149/234682298-fdc808b2-eaab-4d7b-997b-f7ebdbb79e15.png">
+
+<img width="1390" alt="Screenshot 2023-04-25 at 1 26 14 PM" src="https://user-images.githubusercontent.com/93214149/234682329-9a584c65-5504-4403-b5b5-845724706483.png">
 
 ## User Stories
  - As a user, I want to be able to search for a specific drink, so that I can quickly find the recipe and make the drink I want.
