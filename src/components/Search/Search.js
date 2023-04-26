@@ -4,12 +4,14 @@ import { Link } from 'react-router-dom';
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
-
+  const [loading, setLoading] = useState(true);
+  
   const handleSearch = () => {
     fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchTerm}`)
       .then((res) => res.json())
       .then((data) => {
         setSearchResults(data.drinks);
+        setLoading(false);
       });
   };
 
@@ -31,17 +33,21 @@ const Search = () => {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
-        {searchResults.map((drink) => (
-          <Link to={`/drink/${drink.idDrink}`} key={drink.idDrink} state={drink}>
-            <div className="max-w-sm rounded overflow-hidden shadow-lg">
-              <img className="w-full" src={drink.strDrinkThumb} alt={drink.strDrink} />
-              <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2">{drink.strDrink}</div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-2">
+        {loading ? (
+          <p></p>
+        ) : (
+          searchResults.map((drink) => (
+            <Link to={`/drink/${drink.idDrink}`} key={drink.idDrink} state={drink}>
+              <div className="max-w-sm rounded overflow-hidden shadow-lg border border-gray-300 hover:border-emerald-300 transform transition duration-300 hover:scale-105">
+                <img className="w-full" src={drink.strDrinkThumb} alt={drink.strDrink} />
+                <div className="px-6 py-4 bg-emerald-300">
+                  <div className="font-bold text-base truncate">{drink.strDrink}</div>
+                </div>
               </div>
-            </div>
-          </Link>
-        ))}
+            </Link>
+          ))
+        )}
       </div>
     </div>
   );
