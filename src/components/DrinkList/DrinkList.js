@@ -24,28 +24,32 @@ const DrinkList = () => {
       .then((data) => {
         setDrinks(data.drinks);
         setLoading(false);
+        console.log(dropdownChoice);
       });
   }, [dropdownChoice]);
 
   return (
     <div className="mx-5 bg-emerald-4">
       {dropdownChoice === 'Age Verification' ? (
-        <div className="flex justify-center my-4">
+        <div className="flex justify-center my-4" role="alert">
           <div className="p-2 rounded-lg bg-emerald-300 border border-gray-300 text-center text-md font-semibold">
             <p>You must be of legal drinking age to view this site.</p>
-            <button onClick={handleAgeVerification}>Confirm Here</button>
+            <button onClick={handleAgeVerification} aria-label="Confirm age verification">Confirm Here</button>
           </div>
         </div>
       ) : (
         <div>
           <div className="flex justify-center my-4">
+            <label htmlFor="drink-type-select" className="sr-only">Select drink type</label>
             <select
               className="w-full sm:w-1/4 p-2 rounded-lg bg-emerald-300 border border-gray-300 text-center text-md font-semibold"
               onChange={(e) => setDropdownChoice(e.target.value)}
               value={dropdownChoice}
+              id="drink-type-select"
             >
               <option value="Cocktail">Cocktail</option>
               <option value="Shake">Shake</option>
+              <option value="Shot">Shot</option>
               <option value="Beer">Beer</option>
             </select>
           </div>
@@ -55,7 +59,7 @@ const DrinkList = () => {
               <p>Loading...</p>
             ) : (
               drinks.map((drink) => (
-                <Link to={`/drink/${drink.idDrink}`} key={drink.idDrink} state={drink}>
+                <Link to={`/drink/${drink.idDrink}`} key={drink.idDrink} state={drink} aria-label={drink.strDrink}>
                   <div className="max-w-sm rounded overflow-hidden shadow-lg border border-gray-300 hover:border-emerald-300 transform transition duration-300 hover:scale-105">
                     <img className="w-full" src={drink.strDrinkThumb} alt={drink.strDrink} />
                     <div className="px-6 py-4 bg-emerald-300">
