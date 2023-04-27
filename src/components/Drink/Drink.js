@@ -20,11 +20,11 @@ const Drink = () => {
       </div>
 
       <div className="max-w-xl">
-        <h1 className="text-3xl font-bold mb-4">{drink.strDrink}</h1>
+        <h1 className="text-3xl font-bold mb-4" aria-label="Drink name">{drink.strDrink}</h1>
 
         <div className="mb-4">
-          <h2 className="text-lg font-bold mb-2">Ingredients</h2>
-          <ul>
+          <h2 className="text-lg font-bold mb-2" aria-label="Ingredients list">Ingredients</h2>
+          <ul aria-label="Ingredients">
             {drinkData &&
               Object.keys(drinkData)
                 .filter((key) => key.startsWith('strIngredient') && drinkData[key])
@@ -36,8 +36,8 @@ const Drink = () => {
                 ))}
           </ul>
         </div>
-        <h2 className="text-lg font-bold mb-2">Instructions</h2>
-        <p className="text-lg">{drinkData?.strInstructions}</p>
+        <h2 className="text-lg font-bold mb-2" aria-label="Instructions">Instructions</h2>
+        <p className="text-lg" aria-label="Instructions description">{drinkData?.strInstructions}</p>
       </div>
     </div>
   );
