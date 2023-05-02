@@ -29,7 +29,7 @@ const DrinkList = () => {
   }, [dropdownChoice]);
 
   return (
-    <div className="bg-emerald-100 min-h-screen">
+    <div className="bg-emerald-100 min-h-screen mx-2">
       {dropdownChoice === 'Age Verification' ? (
         <div className="flex justify-center items-center w-full h-full">
           <div className="p-6 rounded-lg bg-white border border-gray-300 text-center text-lg font-semibold shadow-lg">
@@ -61,7 +61,7 @@ const DrinkList = () => {
               drinks.map((drink) => (
                 <Link to={`/drink/${drink.idDrink}`} key={drink.idDrink} state={drink} aria-label={drink.strDrink}>
                   <div className="max-w-md rounded-lg overflow-hidden shadow-lg border border-gray-300 hover:border-emerald-500 transform transition duration-300 hover:scale-105 hover:-translate-y-2">
-                    <img className="w-full h-60 object-cover" src={drink.strDrinkThumb} alt={drink.strDrink} />
+                    <img className="w-full " src={drink.strDrinkThumb} alt={drink.strDrink} />
                     <div className="px-4 py-4 bg-emerald-500">
                       <div className="font-bold text-lg text-black truncate mb-2">{drink.strDrink}</div>
                     </div>
