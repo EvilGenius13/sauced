@@ -18,7 +18,7 @@ const Random = () => {
           <img 
             src={drink.strDrinkThumb} 
             alt={drink.strDrink} 
-            className="h-auto drink-menu" 
+            className="h-auto drink-menu drink-image" 
             aria-label={drink.strDrink} 
           />
         </div>

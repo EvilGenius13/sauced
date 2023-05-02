@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import searchImg from './Images/search.png';
 import aboutImg from './Images/about.png';
 import surpriseImg from './Images/surprise.png';
+import logoImg from './Images/logo.png';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,11 +13,13 @@ const Header = () => {
   };
   return (
     <div>
-     <nav className="bg-emerald-300 shadow">
+     <nav className="bg-emerald-500 shadow">
         <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16 items-center">
             <div className="flex-shrink-0">
-              <Link to="/" className="font-bold text-lg text-gray-800">Sauced</Link>
+            <Link to="/" className="block w-40 h-10">
+              <img src={logoImg} alt="Sauced" className="h-full w-full object-contain" />
+            </Link>
             </div>
             <div className="hidden lg:flex lg:items-center">
               <Link

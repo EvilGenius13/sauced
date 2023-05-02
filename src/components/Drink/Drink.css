@@ -2,3 +2,10 @@
   border-radius: 15px;
   padding: 8px;
 }
+
+@media (min-width: 768px) {
+  .drink-image {
+    height: 600px;
+    width: auto;
+  }
+}
