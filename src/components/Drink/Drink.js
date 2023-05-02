@@ -16,7 +16,7 @@ const Drink = () => {
   return (
     <div className="flex flex-col lg:flex-row items-center justify-center mt-8 lg:mt-16">
       <div className="flex-shrink-0 mb-8 lg:mb-0 lg:mr-8">
-        <img src={drink.strDrinkThumb} alt={drink.strDrink} className="h-auto drink-menu" />
+        <img src={drink.strDrinkThumb} alt={drink.strDrink} className="h-auto drink-menu drink-image" />
       </div>
 
       <div className="max-w-xl">

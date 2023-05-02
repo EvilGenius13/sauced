@@ -28,14 +28,14 @@ const Search = () => {
       <div className="flex justify-center my-4">
       <input
         type="text"
-        className="w-full sm:w-1/4 p-2 rounded-lg bg-white border border-gray-300 text-center text-sm"
+        className="w-full sm:w-1/4 p-2 rounded-lg bg-white border border-emerald-500 text-center text-sm"
         placeholder="Search for a drink..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         aria-label="Search for a drink"
       />
         <button
-          className="ml-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          className="ml-2 bg-emerald-500 hover:bg-emerald-300 hover:text-white text-black font-bold py-2 px-4 rounded"
           onClick={handleSearch}
         >
           Search

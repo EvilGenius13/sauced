@@ -29,20 +29,20 @@ const DrinkList = () => {
   }, [dropdownChoice]);
 
   return (
-    <div className="mx-5 bg-emerald-4">
+    <div className="bg-emerald-100 min-h-screen">
       {dropdownChoice === 'Age Verification' ? (
-        <div className="flex justify-center my-4" role="alert">
-          <div className="p-2 rounded-lg bg-emerald-300 border border-gray-300 text-center text-md font-semibold">
-            <p>You must be of legal drinking age to view this site.</p>
-            <button onClick={handleAgeVerification} aria-label="Confirm age verification">Confirm Here</button>
+        <div className="flex justify-center items-center w-full h-full">
+          <div className="p-6 rounded-lg bg-white border border-gray-300 text-center text-lg font-semibold shadow-lg">
+            <p className="mb-4">You must be of legal drinking age to view this site.</p>
+            <button onClick={handleAgeVerification} className="bg-emerald-500 text-white px-4 py-2 rounded-lg hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-400" aria-label="Confirm age verification">Confirm Here</button>
           </div>
         </div>
       ) : (
-        <div>
-          <div className="flex justify-center my-4">
+        <div className="max-w-7xl mx-auto py-8">
+          <div className="flex justify-center mb-8">
             <label htmlFor="drink-type-select" className="sr-only">Select drink type</label>
             <select
-              className="w-full sm:w-1/4 p-2 rounded-lg bg-emerald-300 border border-gray-300 text-center text-md font-semibold"
+              className="w-full sm:w-1/3 p-2 rounded-lg bg-emerald-500 border border-gray-300 text-black text-md font-semibold shadow-lg text-center"
               onChange={(e) => setDropdownChoice(e.target.value)}
               value={dropdownChoice}
               id="drink-type-select"
@@ -54,16 +54,16 @@ const DrinkList = () => {
             </select>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {loading ? (
               <p>Loading...</p>
             ) : (
               drinks.map((drink) => (
                 <Link to={`/drink/${drink.idDrink}`} key={drink.idDrink} state={drink} aria-label={drink.strDrink}>
-                  <div className="max-w-sm rounded overflow-hidden shadow-lg border border-gray-300 hover:border-emerald-300 transform transition duration-300 hover:scale-105">
-                    <img className="w-full" src={drink.strDrinkThumb} alt={drink.strDrink} />
-                    <div className="px-6 py-4 bg-emerald-300">
-                      <div className="font-bold text-base truncate">{drink.strDrink}</div>
+                  <div className="max-w-md rounded-lg overflow-hidden shadow-lg border border-gray-300 hover:border-emerald-500 transform transition duration-300 hover:scale-105 hover:-translate-y-2">
+                    <img className="w-full h-60 object-cover" src={drink.strDrinkThumb} alt={drink.strDrink} />
+                    <div className="px-4 py-4 bg-emerald-500">
+                      <div className="font-bold text-lg text-black truncate mb-2">{drink.strDrink}</div>
                     </div>
                   </div>
                 </Link>
