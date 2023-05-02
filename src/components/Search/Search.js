@@ -47,6 +47,7 @@ const Search = () => {
           No drinks with that name.
         </p>
       ) : (
+        <div className="max-w-7xl mx-auto py-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {loading ? (
             <p></p>
@@ -55,13 +56,14 @@ const Search = () => {
               <Link to={`/drink/${drink.idDrink}`} key={drink.idDrink} state={drink}>
                 <div className="max-w-sm rounded overflow-hidden shadow-lg border border-gray-300 hover:border-emerald-300 transform transition duration-300 hover:scale-105">
                 <img className="w-full" src={drink.strDrinkThumb} alt={drink.strDrink} aria-label={drink.strDrink} />
-                  <div className="px-6 py-4 bg-emerald-300">
-                    <div className="font-bold text-base truncate">{drink.strDrink}</div>
+                  <div className="px-4 py-4 bg-emerald-500">
+                    <div className="font-bold text-lg text-black truncate">{drink.strDrink}</div>
                   </div>
                 </div>
               </Link>
             ))
           )}
+        </div>
         </div>
       )}
     </div>

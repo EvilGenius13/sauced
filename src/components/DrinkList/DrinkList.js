@@ -63,7 +63,7 @@ const DrinkList = () => {
                   <div className="max-w-md rounded-lg overflow-hidden shadow-lg border border-gray-300 hover:border-emerald-500 transform transition duration-300 hover:scale-105 hover:-translate-y-2">
                     <img className="w-full " src={drink.strDrinkThumb} alt={drink.strDrink} />
                     <div className="px-4 py-4 bg-emerald-500">
-                      <div className="font-bold text-lg text-black truncate mb-2">{drink.strDrink}</div>
+                      <div className="font-bold text-lg text-black truncate">{drink.strDrink}</div>
                     </div>
                   </div>
                 </Link>
