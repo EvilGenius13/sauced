@@ -77,7 +77,7 @@ const Header = () => {
         )}
       </nav>
       <div className="header">
-        <h2 className="text-2xl font-medium text-gray-600 m-2">Step 1: Find Drink, Step 2: Drink, Step 3: Profit?</h2>
+        <h2 className="text-2xl font-medium text-gray-600 m-2">We put the "happy" in happy hour!</h2>
       </div>
     </div>
   );
