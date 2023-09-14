@@ -1,7 +1,6 @@
 {
   "name": "pokeinfo",
   "version": "0.1.0",
-  "homepage": "https://EvilGenius13.github.io/sauced",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
